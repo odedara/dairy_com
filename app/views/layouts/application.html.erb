@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DairyCom</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body id="page1">
+<div class="body1">
+  <div class="main">
+    <!--header -->
+    <header>
+      <div class="wrapper">
+        <h1><a href="index.html" id="logo">Agrox Agriculture Company</a></h1>
+        <nav>
+          <ul id="menu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="technology.html">Technology</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slider_bg">
+        <div class="slider">
+          <ul class="items">
+            <li><%= image_tag 'img1.jpg' %></li>
+            <li><%= image_tag 'img2.jpg' %></li>
+            <li><%= image_tag 'img3.jpg' %></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+   
+    <%= yield %>
+  </div>
+</div>
+<div class="main">
+  <!-- footer -->
+  <footer>
+    <div class="wrapper">
+      <section class="col2">
+        <div class="wrapper">
+          <section class="col4">
+            <h3>Follow Us </h3>
+            <ul id="icons">
+              <li><a href="#"><%= image_tag 'icon1.jpg' %><span>Facebook</span></a></li>
+              <li><a href="#"><%= image_tag 'icon2.jpg' %><span>Twitter</span></a></li>
+              <li><a href="#"><%= image_tag 'icon3.jpg' %><span>Linked In</span></a></li>
+            </ul>
+          </section>
+          <section class="col4 pad_left1">
+            <h3>Why Us </h3>
+            <ul id="why_us">
+              <li><a href="#">Sed perspiciatis unde </a></li>
+              <li><a href="#">Omnis natus error</a></li>
+              <li><a href="#">Voluptatem accusantium </a></li>
+            </ul>
+          </section>
+        </div>
+        <div id="footer_link">Copyright &copy; <a href="#">Domain Name</a> All Rights Reserved<br>
+          Design by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></div>
+      </section>
+      <section class="col3 pad_left2">
+        <h3>Email Us</h3>
+        <form id="ContactForm" action="#">
+          <div>
+            <div class="wrapper"> <span>Your Name:</span>
+              <div class="bg">
+                <input type="text" class="input">
+              </div>
+            </div>
+            <div class="wrapper"> <span>Your E-mail:</span>
+              <div class="bg">
+                <input type="text" class="input">
+              </div>
+            </div>
+            <div class="textarea_box"> <span>Your Message:</span>
+              <div class="bg2">
+                <textarea name="textarea" cols="1" rows="1"></textarea>
+              </div>
+            </div>
+            <a href="#">Submit</a> </div>
+        </form>
+      </section>
+    </div>
+    <!-- {%FOOTER_LINK} -->
+  </footer>
+  <!-- / footer -->
+</div>
+</body>
+</html>
